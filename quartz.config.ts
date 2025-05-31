@@ -56,7 +56,7 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }), // For Obsidian-specific markdown features
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.Citations(), // If you use citations
+      // Plugin.Citations(), // If you use citations
       Plugin.Description(),
       Plugin.HardLineBreaks(), // Respect hard line breaks like Obsidian
     ],

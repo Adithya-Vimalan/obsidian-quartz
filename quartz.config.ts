@@ -4,6 +4,7 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "My Obsidian Garden",
+    ignorePatterns: ["Amorphic/*"],
     enableSPA: true,
     enablePopovers: true,
     locale: "en-US",

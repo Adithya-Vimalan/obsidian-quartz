@@ -8,6 +8,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     locale: "en-US",
     baseUrl: "yourdomain.com",
+    defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,

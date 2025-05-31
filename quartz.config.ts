@@ -10,40 +10,40 @@ const config: QuartzConfig = {
     analytics: null, // Disable analytics by default, configure if needed (e.g., { provider: 'google', tagId: 'G-XXXXXXXXXX' })
     locale: "en-US", // Set the locale for your site
     baseUrl: "adithya-vimalan.github.io/obsidian-quartz", // Replace with your actual deployment URL (e.g., example.com or username.github.io/my-notes)
-    ignorePatterns: ["private", "templates", ".obsidian", "Amorphic/**", "Exams/**", "Frontend/**", "Kanban/**"], // Folders to ignore
+    ignorePatterns: ["private", "templates", ".obsidian", "Amorphic/**", "Exams/**", "FrontEnd/**", "Kanban/**", "Excalidraw/**", ".excalidraw", "Clippings/**", "CS 61A/**"], // Folders to ignore
     defaultDateType: "modified", // Display 'modified' date by default. Can be 'created' or 'published'.
     theme: {
-      cdnCaching: true, // Use CDN for fonts for faster loading
+      cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk", // A clean sans-serif font for headers
-        body: "Source Sans Pro", // A readable sans-serif font for body text
-        code: "IBM Plex Mono", // A monospaced font for code blocks
+        header: "IBM Plex Mono",    // Monospaced font for headers
+        body: "IBM Plex Mono",      // Monospaced font for body
+        code: "Fira Code",          // Or stick with IBM Plex Mono if preferred
       },
       colors: {
-        lightMode: {
-          light: "#faf8f8", // Page background
-          lightgray: "#e5e5e5", // Borders
-          gray: "#b8b8b8", // Graph links, heavier borders
-          darkgray: "#4e4e4e", // Body text
-          dark: "#2b2b2b", // Header text and icons
-          secondary: "#284b63", // Link color
-          tertiary: "#84a59d", // Hover states
-          highlight: "rgba(143, 159, 169, 0.15)", // Internal link background, highlighted text
-          textHighlight: "rgba(255, 215, 0, 0.3)", // Markdown highlighted text background (yellowish)
+        lightMode: { // Solarized Light
+          light: "#fdf6e3",         // base3 - Page background
+          lightgray: "#eee8d5",     // base2 - Borders, UI elements
+          gray: "#93a1a1",          // base1 - Comments, secondary content, graph links
+          darkgray: "#586e75",     // base01 - Body text
+          dark: "#cb4b16",          // orange - Header text and icons (distinct accent)
+          secondary: "#268bd2",     // blue - Link color
+          tertiary: "#859900",     // green - Hover states for links, accents
+          highlight: "rgba(238, 232, 213, 0.6)", // base2 with alpha - Internal link background
+          textHighlight: "rgba(181, 137, 0, 0.25)", // Solarized yellow (b58900) with alpha for ==highlight==
         },
-        darkMode: {
-          light: "#161618", // Page background
-          lightgray: "#393639", // Borders
-          gray: "#646464", // Graph links, heavier borders
-          darkgray: "#d4d4d4", // Body text
-          dark: "#ebebec", // Header text and icons
-          secondary: "#7b97aa", // Link color
-          tertiary: "#84a59d", // Hover states
-          highlight: "rgba(143, 159, 169, 0.15)", // Internal link background, highlighted text
-          textHighlight: "rgba(255, 215, 0, 0.3)", // Markdown highlighted text background (yellowish)
+        darkMode: { // Dracula
+          light: "#282a36",         // Background - Page background
+          lightgray: "#44475a",     // Current Line - Borders, UI elements
+          gray: "#6272a4",          // Comment - Graph links, secondary content
+          darkgray: "#f8f8f2",     // Foreground - Body text
+          dark: "#bd93f9",          // Purple - Header text and icons
+          secondary: "#8be9fd",     // Cyan - Link color
+          tertiary: "#ff79c6",     // Pink - Hover states for links
+          highlight: "rgba(68, 71, 90, 0.6)", // Current Line with alpha - Internal link background
+          textHighlight: "rgba(241, 250, 140, 0.35)", // Dracula Yellow (f1fa8c) with alpha for ==highlight==
         },
       },
-    },
+    }
   },
   plugins: {
     transformers: [

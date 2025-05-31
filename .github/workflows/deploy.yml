@@ -11,21 +11,23 @@ on:
  
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       # Check out this repo
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git info
  
       # Setup node for this repo
       - uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: 22
  
       # Checkout Quartz, putting it in the `quartz` subdirectory
       - uses: actions/checkout@v4
         with:
           repository: "jackyzha0/quartz"
-          ref: v4.2.3
+          ref: v4.5.1
           path: quartz
  
       # npm ci on Quartz
